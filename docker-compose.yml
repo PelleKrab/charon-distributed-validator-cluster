@@ -76,7 +76,7 @@ services:
       --execution-endpoint=${LIGHTHOUSE_EXECUTION_ENDPOINT:-http://nethermind:8551}
       --execution-jwt=/opt/jwt/jwt.hex
       --datadir=/opt/app/beacon/
-      --debug-level=inf      
+      --debug-level=info
       --builder=http://cb_pbs:18550
       --http
       --http-address=0.0.0.0
@@ -273,7 +273,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
+      #    - /var/lib/docker/:/var/lib/docker:ro
     networks:
       - cluster
 
